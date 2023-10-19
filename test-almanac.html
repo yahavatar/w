@@ -12,7 +12,11 @@
 	<body>
 	    <div id="div_main"></div>
 	    <script>
-	        var xhr = new XMLHttpRequest();
+            $.getJSON( "https://weather.com/api/v1/p/redux-dal?name=e1f10a1e78da46f5b10a1e78da96f525&geocode=39.3,-85.222&units=e&language=en-US&format=json&duration=15day", {})
+            .done(function( data ) {
+                console.log(data);
+            });
+            /*
 	        var url = "https://weather.com/api/v1/p/redux-dal";
 	        xhr.open("POST", url, true);
 	        xhr.setRequestHeader("Content-Type", "application/json");
@@ -24,6 +28,7 @@
 	        };
 	        var data = '[{"name":"getSunV3DailyForecastWithHeadersUrlConfig","params":{"geocode":"39.31,-85.22","units":"e","language":"en-US","duration":"15day"}}]';
 	        xhr.send(data);
+            */
     	    </script>
 	</body>
 </html>
