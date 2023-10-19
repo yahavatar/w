@@ -11,22 +11,19 @@
 
 	<body>
 	    <div id="div_main"></div>
-  	</body>
-    <!--<script src="images/jquery-3.6.0.min.js"></script>-->
-    <script type="text/javascript" charset="utf-8">
-        var xhr = new XMLHttpRequest();
-        var url = "https://weather.com/api/v1/p/redux-dal";
-        xhr.open("POST", url, true);
-        xhr.setRequestHeader("Content-Type", "application/json");
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                var json = JSON.parse(xhr.responseText);
-                console.log("Response: " + json;
-            }
-        };
-        var data = '[{"name":"getSunV3DailyForecastWithHeadersUrlConfig","params":{"geocode":"39.31,-85.22","units":"e","language":"en-US","duration":"15day"}}]';
-        xhr.send(data);
-
-    </script>
-
+	    <script>
+	        var xhr = new XMLHttpRequest();
+	        var url = "https://weather.com/api/v1/p/redux-dal";
+	        xhr.open("POST", url, true);
+	        xhr.setRequestHeader("Content-Type", "application/json");
+	        xhr.onreadystatechange = function () {
+	            if (xhr.readyState === 4 && xhr.status === 200) {
+	                var json = JSON.parse(xhr.responseText);
+	                console.log("Response: " + json;
+	        }
+	        };
+	        var data = '[{"name":"getSunV3DailyForecastWithHeadersUrlConfig","params":{"geocode":"39.31,-85.22","units":"e","language":"en-US","duration":"15day"}}]';
+	        xhr.send(data);
+    	    </script>
+	</body>
 </html>
