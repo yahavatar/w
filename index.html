@@ -144,8 +144,8 @@
                 */
 
 
-                console.log(data);
-                console.log(data.dayOfWeek);
+                //console.log(data);
+                //console.log(data.dayOfWeek);
                 //console.log(data.temperature);
 
                 // Daily Data
@@ -167,11 +167,51 @@
                 d.precip_chance[dayOfWeekStr] = data.precipChance[0];
                 d.temp_max[dayOfWeekStr] = data.temperature[0];
                 d.temp_min[dayOfWeekStr] = data.temperature[0];
-                d.wind_max[dayOfWeekStr] = data.windSpeed[0];                
+                d.wind_max[dayOfWeekStr] = data.windSpeed[0];              
                 $.each( data.dayOfWeek, function( i, item ) {
                     //console.log("i: " + i);
+		    let flag_rain = false;
+		    let flag_storm = false;
+		    let flag_ice = false;
+		    let flag_snow = false;
+		    let icon = data.iconCode[i];
+		    switch(icon){
+			    case 3:
+			    case 4:
+			    case 37:
+			    case 38:
+			    case 47:
+				    flag_rain = true; flag_storm = true; break;		//icon = 4
+			    case 5: 
+			    case 6:
+			    case 7:
+			    case 8:
+			    case 10:
+			    case 17:
+			    case 18:
+			    case 35:
+				    flag_rain = true; flag_snow = true; break;		// icon = 5
+			    case 9:
+			    case 11:
+			    case 12:
+			    case 39:
+			    case 40:
+			    case 45:
+				    flag_rain = true; break;				// icon = 12
+			    case 13:
+			    case 14:
+			    case 15:
+			    case 16:
+			    case 25:
+			    case 41:
+			    case 42:
+			    case 43:
+			    case 46:
+				    flag_snow = true; break;				// icon = 16
+			    default:
+		    }
                     console.log("item: " + item)
-                    //console.log("item.dayOfWeek[i}: " + data.dayOfWeek[i])
+                    console.log("item.dayOfWeek[i}: " + data.dayOfWeek[i])
                     //console.log("d.dayOfWeek[dayOfWeek]: " + d.dayOfWeek[dayOfWeek])
                     if (d.dayOfWeek[dayOfWeekStr] == item){ //Do not increment dayOfWeek 
                         if (d.icon[dayOfWeekStr] < data.iconCode[i]){ 
@@ -195,6 +235,17 @@
                             d.wind_max[dayOfWeekStr] = data.windSpeed[i]
                             //console.log("   setting temp_max = " + data.temperature[i])
                         }
+			//Decide what icon to display for the day. This is subjective as most days contain multiple weather types
+		        //  * We will need to get a list of all weather types from the wunderground repository: https://www.wunderground.com/static/i/c/v4/34.svg
+			//  * We will have to set some flags early to see if there was any rain
+
+			//By default, we will go with value from above. The following are override rules to always recognize precipitation
+			if (flag_rain === true){ d.icon[dayOfWeekStr] = 12; }
+			if (flag_storm === true){ d.icon[dayOfWeekStr] = 4; }
+			if (flag_snow ===  true){ d.icon[dayOfWeekStr] = 16; }
+			if (flag_snow ===  true && flag_rain === true){ d.icon[dayOfWeekStr] = 5; }
+			if (flag_snow ===  true && flag_storm === true){ d.icon[dayOfWeekStr] = 5; }
+			
                     } else { //Increment dayOfWeek
                         //console.log(d);
                         dayOfWeek = dayOfWeek + 1;
