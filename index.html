@@ -182,6 +182,7 @@
 			    case 38:
 			    case 47:
 				    flag_rain = true; flag_storm = true; break;		//icon = 4
+				    console.log("...Rain + Storm");
 			    case 5: 
 			    case 6:
 			    case 7:
@@ -191,6 +192,7 @@
 			    case 18:
 			    case 35:
 				    flag_rain = true; flag_snow = true; break;		// icon = 5
+				    console.log("...Rain + Snow");
 			    case 9:
 			    case 11:
 			    case 12:
@@ -198,6 +200,7 @@
 			    case 40:
 			    case 45:
 				    flag_rain = true; break;				// icon = 12
+				    console.log("...Rain");
 			    case 13:
 			    case 14:
 			    case 15:
@@ -208,7 +211,10 @@
 			    case 43:
 			    case 46:
 				    flag_snow = true; break;				// icon = 16
+				    console.log("...Snow");
 			    default:
+				    console.log("...Default");
+				    
 		    }
                     console.log("item: " + item)
                     console.log("item.dayOfWeek[i}: " + data.dayOfWeek[i])
