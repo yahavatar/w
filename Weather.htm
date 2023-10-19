@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <link rel="icon" href="http://pododd.com/w/weather.png" type="image/x-icon">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Weather</title>
+	    <style>
+	        body{
+	            background-color: black;
+	            color: white;
+	            font-family: arial;
+	            font-size:25px;
+	            width: 99%;
+    	        }
+            #div_maps img{
+				width: 100%;
+			    }
+			#div_maps table{
+
+				width: 100%;
+			    }
+			#div_maps td{
+				text-align: center;
+				width: 50%;
+			    }
+			.header{
+			    font-size: 15px !important;
+			    }
+	        .icn{
+	            width: 50px;
+	            }
+	        .icn_wind{
+	            width: 15px;
+	            }
+	        .rec{
+	            font-size: 15px;
+	            }
+	        .row_title{
+	            font-size: 15px;
+	            }
+	        .tbl{
+	            padding: 5px;
+	            width: 100%;
+	            }
+	        .tbl td{
+	            border-bottom: 1px solid black;
+	            border-left: 1px solid black;
+	            text-align: center;
+	            valign: center;
+	            }
+	            
+	        .tbl_last5 td{
+	            font-size: 15px;
+	            }
+	        .temp_above_avg{
+	            background-color: red;
+	            border-radius: 5px;
+	            color white;
+	            margin 5px;
+	            padding 5px;
+	            }
+	        .temp_at_avg{
+	            }
+	        .temp_below_avg{
+	            background-color: darkblue;
+	            color: white
+	            }
+	        .wind{
+	            font-size: 10px;
+	            }
+	        .year{
+	            font-size: 12px;
+	            }
+	        .yr_new{
+	            /*background-color: #cd6155;*/
+	            background-color: yellow;
+	            border-radius: 5px;
+	            color: black;
+	            }
+	    </style>
+	</head>
+
+	<body>
+		<center>
+		    <div id="div_main">
+            <div id="div_daily_table"><table border="0" cellpadding="0" cellspacing="0" class="tbl tbl_daily"><tbody><tr><td colspan="16" class="header"><center>15 Day Forecast</center></td></tr><tr><td class="row_title"></td><td class="row_title">Thu</td><td class="row_title">Fri</td><td class="row_title">Sat</td><td class="row_title">Sun</td><td class="row_title">Mon</td><td class="row_title">Tue</td><td class="row_title">Wed</td><td class="row_title">Thu</td><td class="row_title">Fri</td><td class="row_title">Sat</td><td class="row_title">Sun</td><td class="row_title">Mon</td><td class="row_title">Tue</td><td class="row_title">Wed</td><td class="row_title">Thu</td></tr><tr></tr><tr><td class="row_title"></td><td class="row_title">10/19</td><td class="row_title">10/20</td><td class="row_title">10/21</td><td class="row_title">10/22</td><td class="row_title">10/23</td><td class="row_title">10/24</td><td class="row_title">10/25</td><td class="row_title">10/26</td><td class="row_title">10/27</td><td class="row_title">10/28</td><td class="row_title">10/29</td><td class="row_title">10/30</td><td class="row_title">10/31</td><td class="row_title">11/1</td><td class="row_title">11/2</td></tr><tr></tr><tr><td class="row_title">High</td><td>57</td><td>57</td><td>63</td><td>55</td><td>59</td><td>71</td><td>69</td><td>66</td><td>60</td><td>54</td><td>51</td><td>48</td><td>48</td><td>49</td><td>51</td></tr><tr></tr><tr><td class="row_title">Low</td><td>53</td><td>48</td><td>43</td><td>40</td><td>34</td><td>44</td><td>55</td><td>56</td><td>50</td><td>43</td><td>40</td><td>37</td><td>33</td><td>34</td><td>35</td></tr><tr></tr><tr><td class="row_title">Wind</td><td>12</td><td>9</td><td>13</td><td>8</td><td>4</td><td>8</td><td>11</td><td>10</td><td>10</td><td>8</td><td>7</td><td>6</td><td>6</td><td>7</td><td>7</td></tr><tr></tr><tr><td class="row_title">Precip</td><td class="row_title">82%</td><td class="row_title">61%</td><td class="row_title">18%</td><td class="row_title">12%</td><td class="row_title">7%</td><td class="row_title">3%</td><td class="row_title">21%</td><td class="row_title">53%</td><td class="row_title">36%</td><td class="row_title">58%</td><td class="row_title">46%</td><td class="row_title">24%</td><td class="row_title">30%</td><td class="row_title">19%</td><td class="row_title">24%</td></tr><tr></tr><tr><td class="row_title"></td><td class="icon"><img src="Weather_files/28.svg" width="35"></td><td class="icon"><img src="Weather_files/30.svg" width="35"></td><td class="icon"><img src="Weather_files/34.svg" width="35"></td><td class="icon"><img src="Weather_files/34.svg" width="35"></td><td class="icon"><img src="Weather_files/34.svg" width="35"></td><td class="icon"><img src="Weather_files/34.svg" width="35"></td><td class="icon"><img src="Weather_files/29.svg" width="35"></td><td class="icon"><img src="Weather_files/27.svg" width="35"></td><td class="icon"><img src="Weather_files/28.svg" width="35"></td><td class="icon"><img src="Weather_files/27.svg" width="35"></td><td class="icon"><img src="Weather_files/30.svg" width="35"></td><td class="icon"><img src="Weather_files/34.svg" width="35"></td><td class="icon"><img src="Weather_files/34.svg" width="35"></td><td class="icon"><img src="Weather_files/30.svg" width="35"></td><td class="icon"><img src="Weather_files/30.svg" width="35"></td></tr><tr></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" class="tbl tbl_hourly"><tbody><tr><td colspan="25" class="header"><center>24 Hour Forecast</center></td></tr><tr><td class="row_title"></td><td class="row_title">7am</td><td class="row_title">8am</td><td class="row_title">9am</td><td class="row_title">10am</td><td class="row_title">11am</td><td class="row_title">noon</td><td class="row_title">1pm</td><td class="row_title">2pm</td><td class="row_title">3pm</td><td class="row_title">4pm</td><td class="row_title">5pm</td><td class="row_title">6pm</td><td class="row_title">7pm</td><td class="row_title">8pm</td><td class="row_title">9pm</td><td class="row_title">10pm</td><td class="row_title">11pm</td><td class="row_title">mid</td><td class="row_title">1am</td><td class="row_title">2am</td><td class="row_title">3am</td><td class="row_title">4am</td><td class="row_title">5am</td><td class="row_title">6am</td></tr><tr></tr><tr><td class="row_title">Temp</td><td class="row_title">54</td><td class="row_title">53</td><td class="row_title">54</td><td class="row_title">54</td><td class="row_title">55</td><td class="row_title">56</td><td class="row_title">56</td><td class="row_title">56</td><td class="row_title">56</td><td class="row_title">57</td><td class="row_title">57</td><td class="row_title">57</td><td class="row_title">56</td><td class="row_title">53</td><td class="row_title">54</td><td class="row_title">53</td><td class="row_title">53</td><td class="row_title">53</td><td class="row_title">52</td><td class="row_title">52</td><td class="row_title">51</td><td class="row_title">51</td><td class="row_title">51</td><td class="row_title">50</td></tr><tr></tr><tr><td class="row_title"></td><td class="icon"><img src="Weather_files/27.svg" width="25"></td><td class="icon"><img src="Weather_files/28.svg" width="25"></td><td class="icon"><img src="Weather_files/26.svg" width="25"></td><td class="icon"><img src="Weather_files/26.svg" width="25"></td><td class="icon"><img src="Weather_files/11.svg" width="25"></td><td class="icon"><img src="Weather_files/11.svg" width="25"></td><td class="icon"><img src="Weather_files/11.svg" width="25"></td><td class="icon"><img src="Weather_files/12.svg" width="25"></td><td class="icon"><img src="Weather_files/12.svg" width="25"></td><td class="icon"><img src="Weather_files/11.svg" width="25"></td><td class="icon"><img src="Weather_files/11.svg" width="25"></td><td class="icon"><img src="Weather_files/11.svg" width="25"></td><td class="icon"><img src="Weather_files/11.svg" width="25"></td><td class="icon"><img src="Weather_files/12.svg" width="25"></td><td class="icon"><img src="Weather_files/11.svg" width="25"></td><td class="icon"><img src="Weather_files/11.svg" width="25"></td><td class="icon"><img src="Weather_files/11.svg" width="25"></td><td class="icon"><img src="Weather_files/11.svg" width="25"></td><td class="icon"><img src="Weather_files/11.svg" width="25"></td><td class="icon"><img src="Weather_files/11.svg" width="25"></td><td class="icon"><img src="Weather_files/11.svg" width="25"></td><td class="icon"><img src="Weather_files/11.svg" width="25"></td><td class="icon"><img src="Weather_files/11.svg" width="25"></td><td class="icon"><img src="Weather_files/11.svg" width="25"></td></tr><tr></tr></tbody></table></div>
+            <p></p>
+        </div>
+        <div id="div_maps">
+            <table width="100%" cellspacing="1" cellpadding="0" border="0">
+            <tbody><tr>
+              <!--<td width="50%"><img src="https://radblast-aws.wunderground.com/cgi-bin/radar/WUNIDS_map?station=IND&amp;brand=wui&amp;num=10&amp;delay=15&amp;type=N0R&amp;frame=0&amp;scale=1.000&amp;noclutter=0&amp;t=1368730983&amp;lat=0&amp;lon=0&amp;label=you&amp;showstorms=0&amp;map.x=400&amp;map.y=240&amp;centerx=400&amp;centery=240&amp;transx=0&amp;transy=0&amp;showlabels=1&amp;severe=0&amp;rainsnow=0&amp;lightning=0&amp;smooth=0" alt="map"></td>-->
+              <!--<td width="50%"><img src="https://media.psg.nexstardigital.net/wavy/weather/_National_satrad.gif?w=876"></td>-->
+              <td width="50%"><img src="Weather_files/inmaSIRIN_.gif"></td>
+              <td width="50%"><img src="Weather_files/animate.gif" alt="map"></td>
+            </tr><tr>
+              <td width="50%" valign="top"><center><img src="Weather_files/_National_satrad.gif"></center></td>
+              <td width="50%" valign="top"><center><img src="Weather_files/WEB_48hour_rain_snow_1280x720.jpg" alt="map"></center></td>
+            </tr><tr>
+              <td width="50%" valign="top"><center><img src="Weather_files/CPC_30_DAY_PRECIP_1280x720.jpg" alt="map"></center></td>
+              <td width="50%" valign="top"><center><img src="Weather_files/CPC_90_DAY_PRECIP_1280x720.jpg" alt="map"></center></td>
+            </tr><tr>
+              <td width="50%" valign="top"><center><img src="Weather_files/acttemp_1280x720.jpg" alt="map"></center></td>
+              <td width="50%" valign="top"><center><img src="Weather_files/us_wxlo1_1280x720.jpg" alt="map"></center></td>
+            </tr>
+          </tbody></table>
+        </div>
+		</center>
+	
+    <script src="Weather_files/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		window.onload = function() {
+
+            //Get 15 day forecast
+            $.getJSON( "https://api.weather.com/v3/wx/forecast/hourly/15day?apiKey=e1f10a1e78da46f5b10a1e78da96f525&geocode=39.3,-85.222&units=e&language=en-US&format=json", {})
+            .done(function( data ) {
+
+                /* Wunderground APIs
+                    https://api.weather.com/v2/pws/observations/current?apiKey=e1f10a1e78da46f5b10a1e78da96f525&units=e&stationId=KINBATES5&format=json
+
+                    https://api.weather.com/v3/dateTime?apiKey=e1f10a1e78da46f5b10a1e78da96f525&geocode=39.3,-85.222&format=json
+
+                    https://api.weather.com/v3/wx/observations/current?apiKey=e1f10a1e78da46f5b10a1e78da96f525&geocode=39.3,-85.222&units=e&language=en-US&format=json
+
+                    https://api.weather.com/v3/wx/forecast/hourly/15day?apiKey=e1f10a1e78da46f5b10a1e78da96f525&geocode=39.3,-85.222&units=e&language=en-US&format=json
+                    
+                    https://api.weather.com/v3/wx/observations/current?apiKey=e1f10a1e78da46f5b10a1e78da96f525&geocode=39.3,-85.222&language=en-US&units=e&format=json
+
+                    https://api.weather.com/v3/wx/almanac/daily/5day?apiKey=e1f10a1e78da46f5b10a1e78da96f525&icaoCode=KCVG&units=e&startMonth=07&startDay=13&format=json
+
+                    https://api.weather.com/v3/wx/conditions/historical/dailysummary/30day?apiKey=e1f10a1e78da46f5b10a1e78da96f525&icaoCode=KCVG&units=e&language=EN&format=json
+
+                    https://api.weather.com/v2/astro?apiKey=e1f10a1e78da46f5b10a1e78da96f525&geocode=39.3,-85.222&days=10&date=20220713&format=json
+
+
+                    https://radblast-aws.wunderground.com/cgi-bin/radar/WUNIDS_map?station=IND&brand=wui&num=10&delay=15&type=N0R&frame=0&scale=1.000&noclutter=0&t=1368730983&lat=0&lon=0&label=you&showstorms=0&map.x=400&map.y=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=0&lightning=0&smooth=0
+                    http://radblast-aws.wunderground.com/cgi-bin/radar/WUNIDS_map?station=MKX&brand=wui&num=1&delay=15&type=N0R&frame=0&scale=1.000&noclutter=0&t=1361251226&lat=43.07297897&lon=-89.38169861&label=Madison%2C+WI&showstorms=0&map.x=400&map.y=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=0&lightning=0&smooth=0
+                */
+
+
+                //console.log(data);
+                //console.log(data.dayOfWeek);
+                //console.log(data.temperature);
+
+                // Daily Data
+                var d = [];
+                d.date = [];
+                d.dayOfWeek = [];
+                d.icon = [];
+                d.precip_chance = [];
+                d.temp_max = [];
+                d.temp_min = [];
+                d.wind_max = [];
+
+                var dayOfWeek = 1;
+                var dayOfWeekStr = "day_" + dayOfWeek;
+
+                d.date[dayOfWeekStr] = parseInt(data.validTimeLocal[0].substring(5,7)) + "/" + parseInt(data.validTimeLocal[0].substring(8,10));
+                d.dayOfWeek[dayOfWeekStr] = data.dayOfWeek[0];
+                d.icon[dayOfWeekStr] = data.iconCode[0];
+                d.precip_chance[dayOfWeekStr] = data.precipChance[0];
+                d.temp_max[dayOfWeekStr] = data.temperature[0];
+                d.temp_min[dayOfWeekStr] = data.temperature[0];
+                d.wind_max[dayOfWeekStr] = data.windSpeed[0];                
+                $.each( data.dayOfWeek, function( i, item ) {
+                    //console.log("i: " + i);
+                    console.log("item: " + item)
+                    //console.log("item.dayOfWeek[i}: " + data.dayOfWeek[i])
+                    //console.log("d.dayOfWeek[dayOfWeek]: " + d.dayOfWeek[dayOfWeek])
+                    if (d.dayOfWeek[dayOfWeekStr] == item){ //Do not increment dayOfWeek 
+                        if (d.icon[dayOfWeekStr] < data.iconCode[i]){ 
+                            d.icon[dayOfWeekStr] = data.iconCode[i]
+                            //console.log("   setting temp_max = " + data.temperature[i])
+                        }
+                        if (d.precip_chance[dayOfWeekStr] < data.precipChance[i]){ 
+                            d.precip_chance[dayOfWeekStr] = data.precipChance[i]
+                            //console.log("   setting temp_max = " + data.temperature[i])
+                        }
+
+                        if (d.temp_max[dayOfWeekStr] < data.temperature[i]){ 
+                            d.temp_max[dayOfWeekStr] = data.temperature[i]
+                            //console.log("   setting temp_max = " + data.temperature[i])
+                        }
+                        if (d.temp_min[dayOfWeekStr] > data.temperature[i]){
+                            d.temp_min[dayOfWeekStr] = data.temperature[i]
+                            //console.log("   setting temp_min = " + data.temperature[i])
+                        }
+                        if (d.wind_max[dayOfWeekStr] < data.windSpeed[i]){ 
+                            d.wind_max[dayOfWeekStr] = data.windSpeed[i]
+                            //console.log("   setting temp_max = " + data.temperature[i])
+                        }
+                    } else { //Increment dayOfWeek
+                        //console.log(d);
+                        dayOfWeek = dayOfWeek + 1;
+                        dayOfWeekStr = "day_" + dayOfWeek;
+                        d.date[dayOfWeekStr] = parseInt(data.validTimeLocal[i].substring(5,7)) + "/" + parseInt(data.validTimeLocal[i].substring(8,10));
+                        d.dayOfWeek[dayOfWeekStr] = item;
+                        d.icon[dayOfWeekStr] = data.iconCode[i];
+                        d.precip_chance[dayOfWeekStr] = data.precipChance[i];
+                        d.temp_max[dayOfWeekStr] = data.temperature[i];
+                        d.temp_min[dayOfWeekStr] = data.temperature[i];
+                        d.wind_max[dayOfWeekStr] = data.windSpeed[i];
+                        //console.log("   Incrementing dayOfWeek = " + dayOfWeekStr)
+                        //console.log("   RESETTING dayOfWeek string = " + d.dayOfWeek[dayOfWeekStr])
+                        //console.log("   RESETTING TEMP_MAX = " + d.temp_max[dayOfWeekStr])
+                        //console.log("   RESETTING TEMP_MIN = " + d.temp_max[dayOfWeekStr])
+                    }
+                })
+
+                console.log("Done with processing all daily data");
+                console.log(d);
+
+                var html = "";
+                
+                //html += "validTimeLocal: " + data.validTimeLocal[0] + "<p></p>";
+                //html += "validTimeLocal: " + data.validTimeLocal[0].substring(0,10) + "<p></p>";
+                //html += "month: " + parseInt(data.validTimeLocal[0].substring(5,7)) + "<p></p>";
+                //html += "day: " + parseInt(data.validTimeLocal[0].substring(8,10)) + "<p></p>";
+                //html += "day: " + parseInt(data.validTimeLocal[0].substring(5,7)) + "/" + parseInt(data.validTimeLocal[0].substring(8,10)) + "<p></p>";
+                //html += "Month: " + Date.parse(data.validTimeLocal[0].substring(0,10)).format("MM/DD") + "<p></p>";
+                //.format("MM/DD")
+                
+                // Hourly Data
+                html += "<table border=0 cellpadding=0 cellspacing=0 class='tbl tbl_daily'>"
+                html += "<tr><td colspan=16 class='header'><center>15 Day Forecast</center></td></tr>"
+                var date_line = "";
+                var day_line = "";
+                var icon_line = "";
+                var precip_line = "";
+                var temp_max_line = "";
+                var temp_min_line = "";
+                var wind_max_line = "";
+                for(var i=1; i<dayOfWeek; i++){
+                    date_line += "<td class='row_title'>" + d.date["day_" + i] + "</td>";
+                    day_line += "<td class='row_title'>" + d.dayOfWeek["day_" + i].substring(0,3) + "</td>";
+                    icon_line += "<td class='icon'>" + "<img src='https://www.wunderground.com/static/i/c/v4/" + d.icon["day_" + i] + ".svg' width='35' ></td>";
+                    precip_line += "<td class='row_title'>" + d.precip_chance["day_" + i] + "%</td>";
+                    temp_max_line += "<td>" + d.temp_max["day_" + i]+ "</td>"
+                    temp_min_line += "<td>" + d.temp_min["day_" + i]+ "</td>"
+                    wind_max_line += "<td>" + d.wind_max["day_" + i]+ "</td>"
+                }
+
+                html += "<tr><td class='row_title'></td>" + day_line + "<tr>";
+                html += "<tr><td class='row_title'></td>" + date_line + "<tr>";
+                html += "<tr><td class='row_title'>High</td>" + temp_max_line + "<tr>";
+                html += "<tr><td class='row_title'>Low</td>" + temp_min_line + "<tr>";
+                html += "<tr><td class='row_title'>Wind</td>" + wind_max_line + "<tr>";
+                html += "<tr><td class='row_title'>Precip</td>" + precip_line + "<tr>";
+                html += "<tr><td class='row_title'></td>" + icon_line + "<tr>";
+                html += "</table>"
+                
+                html += "<table border=0 cellpadding=0 cellspacing=0 class='tbl tbl_hourly'>"
+                html += "<tr><td colspan=25 class='header'><center>24 Hour Forecast</center></td></tr>"
+                icon_line = "";
+                var temp_line = "";
+                var time_line = "";
+                var t = 0;
+                var t_str = "";
+                for(var i=0; i<24; i++){
+                    icon_line += "<td class='icon'>" + "<img src='https://www.wunderground.com/static/i/c/v4/" + data.iconCode[i] + ".svg' width='25' ></td>";
+                    t = parseInt(data.validTimeLocal[i].substring(11,16));
+                    if (t < 12){ t_str = t + "am"; }
+                    if (t > 12){ t_str = (t - 12) + "pm"; }
+                    if (t == 0){ t_str = "mid"; }
+                    if (t == 12){ t_str = "noon"; }
+                    time_line += "<td class='row_title'>" + t_str + "</td>";
+                    temp_line += "<td class='row_title'>" + data.temperature[i] + "</td>";
+                }
+                
+                html += "<tr><td class='row_title'></td>" + time_line + "<tr>";
+                html += "<tr><td class='row_title'>Temp</td>" + temp_line + "<tr>";
+                html += "<tr><td class='row_title'></td>" + icon_line + "<tr>";
+                
+                $("#div_daily_table").html(html);
+                console.log(html);
+            })
+
+        }
+
+	</script>
+
+
+</body></html>
