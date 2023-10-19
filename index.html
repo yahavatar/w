@@ -218,9 +218,10 @@
 				    
 		    }
                     console.log("item: " + item)
-                    console.log("item.dayOfWeek[i}: " + data.dayOfWeek[i])
+                    console.log("item.dayOfWeek[i]: " + data.dayOfWeek[i])
                     //console.log("d.dayOfWeek[dayOfWeek]: " + d.dayOfWeek[dayOfWeek])
-                    if (d.dayOfWeek[dayOfWeekStr] == item){ //Do not increment dayOfWeek 
+                    if (d.dayOfWeek[dayOfWeekStr] == item){ //Do not increment dayOfWeek
+			console.log("************* Day not incr");
                         if (d.icon[dayOfWeekStr] < data.iconCode[i]){ 
                             d.icon[dayOfWeekStr] = data.iconCode[i]
                             //console.log("   setting temp_max = " + data.temperature[i])
