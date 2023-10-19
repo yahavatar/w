@@ -169,12 +169,13 @@
                 d.temp_min[dayOfWeekStr] = data.temperature[0];
                 d.wind_max[dayOfWeekStr] = data.windSpeed[0];              
                 $.each( data.dayOfWeek, function( i, item ) {
-                    //console.log("i: " + i);
+                    console.log("i: " + i);
 		    let flag_rain = false;
 		    let flag_storm = false;
 		    let flag_ice = false;
 		    let flag_snow = false;
 		    let icon = data.iconCode[i];
+		    console.log("icon: " + icon);
 		    switch(icon){
 			    case 3:
 			    case 4:
