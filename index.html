@@ -123,7 +123,8 @@
 		window.onload = function() {
 
             //Get 15 day forecast
-            $.getJSON( "https://api.weather.com/v3/wx/forecast/hourly/15day?apiKey=e1f10a1e78da46f5b10a1e78da96f525&geocode=39.3,-85.222&units=e&language=en-US&format=json", {})
+			//Old API Key: e1f10a1e78da46f5b10a1e78da96f525
+            $.getJSON( "https://api.weather.com/v3/wx/forecast/hourly/15day?apiKey=5c241d89f91274015a577e3e17d43370&geocode=39.3,-85.222&units=e&language=en-US&format=json", {})
             .done(function( data ) {
 
                 /* Wunderground APIs
